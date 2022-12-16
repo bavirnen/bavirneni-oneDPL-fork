@@ -209,7 +209,7 @@ jobs:
         shell: cmd
         run: |
           call %CONDA%/condabin/conda.bat activate base
-          conda install -c intel tbb-devel
+          conda install -c intel tbb-devel=2021.7.0
       - name: Install Intel® oneAPI DPC++/C++ Compiler
         if: matrix.cxx_compiler == 'dpcpp' || matrix.cxx_compiler == 'icx'
         shell: cmd
